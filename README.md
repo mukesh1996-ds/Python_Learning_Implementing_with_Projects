@@ -171,3 +171,195 @@ Strings in python are surrounded by either single quotation marks, or double quo
 | zfill()        | Fills the string with a specified number of 0 values at the beginning |
 
 
+**Boolean Values**
+
+In programming you often need to know if an expression is `True or False`. You can evaluate any expression in Python, and get one of two answers, `True or False`. When you compare two values, the expression is evaluated and Python returns the Boolean answer.
+
+When you run a condition in an if statement, Python returns `True or False`.
+
+* `Evaluate Values and Variables:`The bool() function allows you to evaluate any value, and give you True or False in return.
+
+* `Most Values are True:` Almost any value is evaluated to True if it has some sort of content. Any string is True, except empty strings. Any number is True, except 0. Any list, tuple, set, and dictionary are True, except empty ones.
+
+* `Some Values are False:` In fact, there are not many values that evaluate to `False`, except empty values, such as `(), [], {}, ""`, the number `0`, and the value `None`. And of course the value `False` evaluates to `False`.
+
+**Operators:** Operators are used to perform operations on variables and values. Python divides the operators in the following groups:
+
+* `Arithmetic operators:` Arithmetic operators are used with numeric values to perform common mathematical operations
+
+| Operator        | Name            | Example    |
+|-----------------|-----------------|------------|
+| +               | Addition        | `x + y`    |
+| -               | Subtraction     | `x - y`    |
+| *               | Multiplication  | `x * y`    |
+| /               | Division        | `x / y`    |
+| %               | Modulus         | `x % y`    |
+| **              | Exponentiation  | `x ** y`   |
+| //              | Floor division  | `x // y`   |
+
+* `Assignment operators:` Assignment operators are used to assign values to variables
+
+| Operator | Example | Same As |
+| -------- | ------- | ------- | 
+| =        | x = 5   | x = 5   |
+| +=       | x += 3  | x = x + 3 |
+| -=       | x -= 3  | x = x - 3 |
+| *=       | x *= 3  | x = x * 3 |
+| /=       | x /= 3  | x = x / 3 |
+| %=       | x %= 3  | x = x % 3 |
+| //=      | x //= 3 | x = x // 3 |
+| **=      | x **= 3 | x = x ** 3 |
+| &=       | x &= 3  | x = x & 3 | 
+| |=       | x |= 3  | x = x | 3 | 
+| ^=       | x ^= 3  | x = x ^ 3 | 
+| >>=      | x >>= 3 | x = x >> 3 | 
+| <<=      | x <<= 3 | x = x << 3 | 
+* `Comparison operators:` Comparison operators are used to compare two values
+
+| Operator                | Name                           | Example        |
+|-------------------------|--------------------------------|----------------|
+| `==`                    | Equal                          | `x == y`       |
+| `!=`                    | Not equal                      | `x != y`       |
+| `>`                     | Greater than                   | `x > y`        |
+| `<`                     | Less than                      | `x < y`        |
+| `>=`                    | Greater than or equal to       | `x >= y`       |
+| `<=`                    | Less than or equal to          | `x <= y`       |
+
+* `Logical operators:` Logical operators are used to combine conditional statements.
+
+| Operator | Description                                  | Example                     |
+| -------- | -------------------------------------------- | --------------------------- |
+| `and`    | Returns True if both statements are true    | `x < 5 and x < 10`          |
+| `or`     | Returns True if one of the statements is true | `x < 5 or x < 4`            |
+| `not`    | Reverse the result, returns False if true    | `not(x < 5 and x < 10)`     |
+
+* `Identity operators:` Identity operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location.
+
+| Operator  | Description                                       | Example        |
+|-----------|---------------------------------------------------|----------------|
+| is        | Returns True if both variables are the same object | `x is y`       |
+| is not    | Returns True if both variables are not the same object | `x is not y`  |
+
+* `Membership operators:` Membership operators are used to test if a sequence is presented in an object.
+
+| Operator | Description                                     | Example         |
+|----------|-------------------------------------------------|-----------------|
+| `in`     | Returns True if a sequence with the specified  | `x in y`        |
+|          | value is present in the object                  |                 |
+| `not in` | Returns True if a sequence with the specified  | `x not in y`    |
+|          | value is not present in the object              |                 |
+
+
+* `Bitwise operators:` Bitwise operators are used to compare (binary) numbers
+
+| Operator | Description                                     | Example         |
+|----------|-------------------------------------------------|-----------------|
+| `in`     | Returns True if a sequence with the specified  | `x in y`        |
+|          | value is present in the object                  |                 |
+| `not in` | Returns True if a sequence with the specified  | `x not in y`    |
+|          | value is not present in the object              |                 |
+
+* `Precedence Operator:` Operator precedence describes the order in which operations are performed.
+
+| Operator                    | Description                                       |
+| ----------------------------| ------------------------------------------------- |
+| ()                          | Parentheses                                       |
+| **                          | Exponentiation                                    |
+| +x, -x, ~x                  | Unary plus, unary minus, and bitwise NOT         |
+| * / // %                    | Multiplication, division, floor division, and modulus |
+| + -                         | Addition and subtraction                         |
+| << >>                        | Bitwise left and right shifts                    |
+| &                            | Bitwise AND                                       |
+| ^                            | Bitwise XOR                                       |
+| \|                           | Bitwise OR                                        |
+| == != > >= < <= is is not in not in | Comparisons, identity, and membership operators |
+| not                          | Logical NOT                                       |
+| and                          | AND                                               |
+| or                           | OR                                                |
+
+**Python Lists**
+
+Lists are used to store multiple items in a single variable. Lists are one of 4 built-in data types in Python used to store collections of data, the other 3 are `Tuple, Set, and Dictionary`, all with different qualities and usage.
+
+* `List Items:` List items are ordered, changeable, and allow duplicate values. List items are indexed, the first item has index [0], the second item has index [1] etc.
+* `Ordered:` When we say that lists are ordered, it means that the items have a defined order, and that order will not change. If you add new items to a list, the new items will be placed at the end of the list.
+* `Changeable:` The list is changeable, meaning that we can change, add, and remove items in a list after it has been created.
+* `Allow Duplicates:` Since lists are indexed, lists can have items with the same value
+* `List Length:` To determine how many items a list has, use the len() function
+* `List Items - Data Types:` List items can be of any data type.
+* `type():`From Python's perspective, lists are defined as objects with the data type 'list'
+* `The list() Constructor:` It is also possible to use the list() constructor when creating a new list.
+* `Python Collections (Arrays):` There are four collection data types in the Python programming language:
+
+* **List** is a collection which is ordered and changeable. Allows duplicate members.
+* **Tuple** is a collection which is ordered and unchangeable. Allows duplicate members.
+* **Set** is a collection which is unordered, unchangeable*, and unindexed. No duplicate members.
+* **Dictionary** is a collection which is ordered** and changeable. No duplicate members.
+
+* `Access List Items:` List items are indexed and you can access them by referring to the index number
+* `Negative Indexing:` Negative indexing means start from the end -1 refers to the last item, -2 refers to the second last item etc.
+* `Range of Indexes:` You can specify a range of indexes by specifying where to start and where to end the range. When specifying a range, the return value will be a new list with the specified items.
+* `Range of Negative Indexes:` Specify negative indexes if you want to start the search from the end of the list
+* `Check if Item Exists:` To determine if a specified item is present in a list use the in keyword.
+* `Change List Items:` To change the value of a specific item, refer to the index number.
+* `Change a Range of Item Values:`To change the value of items within a specific range, define a list with the new values, and refer to the range of index numbers where you want to insert the new values.If you insert more items than you replace, the new items will be inserted where you specified, and the remaining items will move accordingly. If you insert less items than you replace, the new items will be inserted where you specified, and the remaining items will move accordingly:
+* `Insert Items:` To insert a new list item, without replacing any of the existing values, we can use the insert() method. The insert() method inserts an item at the specified index.
+* `Add List Items:` To add an item to the end of the list, use the append() method
+* `Insert Items:` To insert a list item at a specified index, use the insert() method. The insert() method inserts an item at the specified index.
+* `Extend List:` To append elements from another list to the current list, use the extend() method.
+* `Add Any Iterable:` The extend() method does not have to append lists, you can add any iterable object (tuples, sets, dictionaries etc.).
+* `Remove List Items:` The remove() method removes the specified item. If there are more than one item with the specified value, the remove() method removes the first occurance.
+* `Remove Specified Index:` The pop() method removes the specified index. If you do not specify the index, the pop() method removes the last item. The del keyword also removes the specified index The del keyword can also delete the list completely.
+* `Clear the List:` The clear() method empties the list. The list still remains, but it has no content.
+* `Loop Lists:` You can loop through the list items by using a for loop.
+* `Loop Through the Index Numbers:` You can also loop through the list items by referring to their index number.Use the range() and len() functions to create a suitable iterable.
+* `Using a While Loop:` You can loop through the list items by using a while loop. Use the len() function to determine the length of the list, then start at 0 and loop your way through the list items by referring to their indexes. Remember to increase the index by 1 after each iteration.
+* `Looping Using List Comprehension:` List Comprehension offers the shortest syntax for looping through lists
+* `List comprehension:` List comprehension offers a shorter syntax when you want to create a new list based on the values of an existing list.
+Example: Based on a list of fruits, you want a new list, containing only the fruits with the letter "a" in the name. Without list comprehension you will have to write a for statement with a conditional test inside. With list comprehension you can do all that with only one line of code.
+* `Sort List Alphanumerically:` List objects have a sort() method that will sort the list alphanumerically, ascending, by default.
+* `Sort Descending:` To sort descending, use the keyword argument reverse = True
+* `Customize Sort Function:` You can also customize your own function by using the keyword argument key = function. The function will return a number that will be used to sort the list (the lowest number first)
+* `Case Insensitive Sort:` By default the sort() method is case sensitive, resulting in all capital letters being sorted before lower case letters
+* `Reverse Order:` The reverse() method reverses the current sorting order of the elements.
+* `Copy Lists:` You cannot copy a list simply by typing list2 = list1, because: list2 will only be a reference to list1, and changes made in list1 will automatically also be made in list2. There are ways to make a copy, one way is to use the built-in List method copy(). Another way to make a copy is to use the built-in method list().\
+* `Join Lists:` There are several ways to join, or concatenate, two or more lists in Python. One of the easiest ways are by using the + operator. Another way to join two lists is by appending all the items from list2 into list1, one by one Or you can use the extend() method, where the purpose is to add elements from one list to another list. 
+* `List Methods:`Python has a set of built-in methods that you can use on lists.
+
+| Method      | Description                                                      |
+|-------------|------------------------------------------------------------------|
+| append()    | Adds an element at the end of the list                           |
+| clear()     | Removes all the elements from the list                           |
+| copy()      | Returns a copy of the list                                       |
+| count()     | Returns the number of elements with the specified value          |
+| extend()    | Add the elements of a list (or any iterable), to the end of the current list |
+| index()     | Returns the index of the first element with the specified value  |
+| insert()    | Adds an element at the specified position                        |
+| pop()       | Removes the element at the specified position                   |
+| remove()    | Removes the item with the specified value                        |
+| reverse()   | Reverses the order of the list                                   |
+| sort()      | Sorts the list                                                   |
+
+**Python Tuples**
+
+Tuples are used to store multiple items in a single variable. Tuple is one of 4 built-in data types in Python used to store collections of data, the other 3 are List, Set, and Dictionary, all with different qualities and usage. A tuple is a collection which is ordered and unchangeable. Tuples are written with round brackets.  
+
+* `Tuple Items:` Tuple items are ordered, unchangeable, and allow duplicate values. Tuple items are indexed, the first item has index [0], the second item has index [1] etc.
+* `Ordered:` When we say that tuples are ordered, it means that the items have a defined order, and that order will not change.
+* `Unchangeable:` Tuples are unchangeable, meaning that we cannot change, add or remove items after the tuple has been created.
+* `Allow Duplicates:` Since tuples are indexed, they can have items with the same value
+* `Create Tuple With One Item:` To create a tuple with only one item, you have to add a comma after the item, otherwise Python will not recognize it as a tuple.
+* `Access Tuple Items:` You can access tuple items by referring to the index number, inside square brackets
+* `Negative Indexing:` Negative indexing means start from the end. -1 refers to the last item, -2 refers to the second last item etc.
+* `Range of Indexes:` You can specify a range of indexes by specifying where to start and where to end the range. When specifying a range, the return value will be a new tuple with the specified items.
+* `Range of Negative Indexes:` Specify negative indexes if you want to start the search from the end of the tuple
+* `Check if Item Exists:` To determine if a specified item is present in a tuple use the in keyword
+* `Update Tuples:` Tuples are unchangeable, meaning that you cannot change, add, or remove items once the tuple is created. But there are some workarounds. 
+* `Change Tuple Values:` Once a tuple is created, you cannot change its values. Tuples are unchangeable, or immutable as it also is called. But there is a workaround. You can convert the tuple into a list, change the list, and convert the list back into a tuple.
+* `Add Items:` Since tuples are immutable, they do not have a built-in append() method, but there are other ways to add items to a tuple.
+1. Convert into a list: Just like the workaround for changing a tuple, you can convert it into a list, add your item(s), and convert it back into a tuple.
+2. Add tuple to a tuple. You are allowed to add tuples to tuples, so if you want to add one item, (or many), create a new tuple with the item(s), and add it to the existing tuple
+* `Remove Items:` Tuples are unchangeable, so you cannot remove items from it, but you can use the same workaround as we used for changing and adding tuple items.
+* `Unpack Tuples:` When we create a tuple, we normally assign values to it. This is called "packing" a tuple But, in Python, we are also allowed to extract the values back into variables. This is called "unpacking"
+* `Using Asterisk`*``: If the number of variables is less than the number of values, you can add an * to the variable name and the values will be assigned to the variable as a list If the asterisk is added to another variable name than the last, Python will assign values to the variable until the number of values left matches the number of variables left.
+
