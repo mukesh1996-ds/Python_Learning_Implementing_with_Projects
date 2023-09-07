@@ -38,3 +38,32 @@ It is used for:
 * Python uses new lines to complete a command, as opposed to other programming languages which often use semicolons or parentheses.
 * Python relies on indentation, using whitespace, to define scope; such as the scope of loops, functions and classes. Other programming languages often use curly-brackets for this purpose.
 
+**Python Comments**
+
+* Comments can be used to explain Python code.
+* Comments can be used to make the code more readable.
+* Comments can be used to prevent execution when testing code.
+
+**Python Variables**
+
+* Variables are containers for storing data values. A variable is created the moment you first assign a value to it. Variables do not need to be declared with any particular type, and can even change type after they have been set.
+
+* `Casting:` If you want to specify the data type of a variable, this can be done with casting.
+
+* `Get the Type:` You can get the data type of a variable with the `type()` function.
+
+* `Single or Double Quotes:` String variables can be declared either by using single or double quotes
+
+* `Case-Sensitive:` Variable names are case-sensitive.
+
+* `Variable Names:` A variable can have a short name (like x and y) or a more descriptive name (age, carname, total_volume). Rules for Python variables:
+
+    * A variable name must start with a letter or the underscore character
+    * A variable name cannot start with a number
+    * A variable name can only contain alpha-numeric characters and underscores (A-z, 0-9, and _ )
+    * Variable names are case-sensitive (age, Age and AGE are three different variables)
+    * A variable name cannot be any of the Python keywords.
+    * Python allows you to assign values to multiple variables in one line
+                        `x, y, z = "Orange", "Banana", "Cherry"`
+    * If you have a collection of values in a list, tuple etc. Python allows you to extract the values into variables. This is called unpacking.
+
