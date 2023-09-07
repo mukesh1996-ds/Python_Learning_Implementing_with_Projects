@@ -48,6 +48,6 @@ fruits = ["Apple", "Banana", "Mango"]
 
 a, b, c = fruits
 
-print("VSalue of a is:" a)
-print("Value of b is:" b)
-print("Value of c is:" c)
+print("Value of a is:", a)
+print("Value of b is:", b)
+print("Value of c is:", c)
