@@ -51,3 +51,32 @@ a, b, c = fruits
 print("Value of a is:", a)
 print("Value of b is:", b)
 print("Value of c is:", c)
+
+# Gloabal Variable
+
+# Step 1: Declare a global variable outside of any function or method
+global_variable = 10
+
+# Step 2: Use the global keyword to modify the global variable from within a function
+def modify_global_variable():
+    global global_variable  # Use the global keyword to indicate that we're modifying the global variable
+    global_variable = 20     # Modify the global variable
+
+# You can access the global variable from anywhere in your code
+print("Before modification:", global_variable)
+
+# Call the function to modify the global variable
+modify_global_variable()
+
+# Check the value of the global variable after modification
+print("After modification:", global_variable)
+
+# Global variable with same variable name
+global_variable = 10
+
+def modify_global_variable():
+    global global_variable
+    global_variable = 20
+
+modify_global_variable()
+print("After modification:", global_variable)  # This will print the modified global variable value (20)
