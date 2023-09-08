@@ -363,3 +363,137 @@ Tuples are used to store multiple items in a single variable. Tuple is one of 4 
 * `Unpack Tuples:` When we create a tuple, we normally assign values to it. This is called "packing" a tuple But, in Python, we are also allowed to extract the values back into variables. This is called "unpacking"
 * `Using Asterisk`*``: If the number of variables is less than the number of values, you can add an * to the variable name and the values will be assigned to the variable as a list If the asterisk is added to another variable name than the last, Python will assign values to the variable until the number of values left matches the number of variables left.
 
+**Python Set**
+
+Sets are used to store multiple items in a single variable. A set is a collection which is unordered, unchangeable*, unindexed, and No duplicate values are allowed. Set is decleared using `{}`.
+
+* `Accessing set items:` You cannot access items in a set by referring to an index or a key. But you can loop through the set items using a for loop, or ask if a specified value is present in a set, by using the in keyword.
+
+*  `Add items to the set:` Once a set is created, you cannot change its items, but you can add new items. To add one item to a set use the `add() method`. To add items from another set into the current set, use the `update() method`.
+
+* `Remove set items:` To remove an item in a set, use the remove(), or the discard() method. You can also use the pop() method to remove an item, but this method will remove a random item, so you cannot be sure what item that gets removed. The return value of the pop() method is the removed item.
+
+* `Loop Set:`You can loop through the set items by using a for loop.
+* `Join Set:` There are several ways to join two or more sets in Python. You can use the union() method that returns a new set containing all items from both sets, or the update() method that inserts all the items from one set into another. The `intersection() method` will return a new set, that only contains the items that are present in both sets.
+*  `Set Methods:` Python has a set of built-in methods that you can use on sets.
+
+
+| Method                      | Description                                                 |
+| --------------------------- | ----------------------------------------------------------- |
+| `add()`                     | Adds an element to the set                                  |
+| `clear()`                   | Removes all the elements from the set                       |
+| `copy()`                    | Returns a copy of the set                                   |
+| `difference()`              | Returns a set containing the difference between two or more sets |
+| `difference_update()`       | Removes the items in this set that are also included in another, specified set |
+| `discard()`                 | Remove the specified item                                  |
+| `intersection()`            | Returns a set that is the intersection of two other sets   |
+| `intersection_update()`     | Removes the items in this set that are not present in other, specified set(s) |
+| `isdisjoint()`              | Returns whether two sets have an intersection or not       |
+| `issubset()`                | Returns whether another set contains this set or not       |
+| `issuperset()`              | Returns whether this set contains another set or not       |
+| `pop()`                     | Removes an element from the set                            |
+| `remove()`                  | Removes the specified element                              |
+| `symmetric_difference()`    | Returns a set with the symmetric differences of two sets   |
+| `symmetric_difference_update()` | Inserts the symmetric differences from this set and another |
+| `union()`                   | Returns a set containing the union of sets                 |
+| `update()`                  | Update the set with the union of this set and others       |
+
+
+**Python Dictionaries**
+Dictionaries are used to store data values in `key:value pairs`. A dictionary is a collection which is ordered*, changeable and do not allow duplicates. Dictionaries are written with curly brackets, and have keys and values
+
+* `Dictionary Items:` Dictionary items are ordered, changeable, and does not allow duplicates. Dictionary items are presented in key:value pairs, and can be referred to by using the key name.
+
+`When we say that dictionaries are ordered, it means that the items have a defined order, and that order will not change. Unordered means that the items does not have a defined order, you cannot refer to an item by using an index.` 
+
+Dictionaries are changeable, meaning that we can change, add or remove items after the dictionary has been created.
+
+* `Accessing Dictionary Items:` You can access the items of a dictionary by referring to its key name, inside square brackets. There is also a method called `get()` that will give you the same result. The `keys()` method will return a list of all the keys in the dictionary. The list of the keys is a view of the dictionary, meaning that any changes done to the dictionary will be reflected in the keys list.
+* `Get Values:` The `values()` method will return a list of all the values in the dictionary. The list of the values is a view of the dictionary, meaning that any changes done to the dictionary will be reflected in the values list.
+* `Get Items:` The items() method will return each item in a dictionary, as tuples in a list. The returned list is a view of the items of the dictionary, meaning that any changes done to the dictionary will be reflected in the items list.
+* `Change Dictionary Items:` You can change the value of a specific item by referring to its key name
+* `Update Dictionary:` The update() method will update the dictionary with the items from the given argument.
+* `Add Dictionary Items:` Adding an item to the dictionary is done by using a new index key and assigning a value to it.
+* `Update Dictionary:` The update() method will update the dictionary with the items from a given argument. If the item does not exist, the item will be added.
+* `Remove items:`There are several methods to remove items from a dictionary.
+* `Loop Through Dictionary:` You can loop through a dictionary by using a for loop. When looping through a dictionary, the return value are the keys of the dictionary, but there are methods to return the values as well.
+* `Copy Dictionaries:` You cannot copy a dictionary simply by typing dict2 = dict1, because: dict2 will only be a reference to dict1, and changes made in dict1 will automatically also be made in dict2. There are ways to make a copy, one way is to use the built-in Dictionary method copy().
+* `Nested Dictionaries:` A dictionary can contain dictionaries, this is called nested dictionaries.
+* `Accessing items in Nested Dictionaries`: To access items from a nested dictionary, you use the name of the dictionaries, starting with the outer dictionary
+
+* `Dictionary Methods:` Python has a set of built-in methods that you can use on dictionaries.
+
+| Method       | Description                                               |
+| ------------ | --------------------------------------------------------- |
+| `clear()`    | Removes all the elements from the dictionary             |
+| `copy()`     | Returns a copy of the dictionary                          |
+| `fromkeys()` | Returns a dictionary with the specified keys and value   |
+| `get()`      | Returns the value of the specified key                    |
+| `items()`    | Returns a list containing a tuple for each key value pair |
+| `keys()`     | Returns a list containing the dictionary's keys           |
+| `pop()`      | Removes the element with the specified key                |
+| `popitem()`  | Removes the last inserted key-value pair                  |
+| `setdefault()` | Returns the value of the specified key. If the key does not exist: insert the key, with the specified value |
+| `update()`   | Updates the dictionary with the specified key-value pairs |
+| `values()`   | Returns a list of all the values in the dictionary        |
+
+
+**Python IF-ELSE Conditions:**
+Python supports the usual logical conditions from mathematics:
+
+| Comparison Type            | Syntax    |
+|---------------------------|-----------|
+| Equals                    | `a == b`  |
+| Not Equals                | `a != b`  |
+| Less than                 | `a < b`   |
+| Less than or equal to    | `a <= b`  |
+| Greater than              | `a > b`   |
+| Greater than or equal to | `a >= b`  |
+
+
+These conditions can be used in several ways, most commonly in "if statements" and loops. An "if statement" is written by using the `if keyword`.
+
+* `Elif:` The elif keyword is Python's way of saying "if the previous conditions were not true, then try this condition".
+* `Else:` The else keyword catches anything which isn't caught by the preceding conditions.
+* `And`: The and keyword is a logical operator, and is used to combine conditional statements
+* `OR:` The or keyword is a logical operator, and is used to combine conditional statements
+* `Not:` The not keyword is a logical operator, and is used to reverse the result of the conditional statement
+* `Nested If:` You can have if statements inside if statements, this is called nested if statements.
+* `The pass Statement:` if statements cannot be empty, but if you for some reason have an if statement with no content, put in the pass statement to avoid getting an error.
+
+**Python Loop**
+Python has two primitive loop commands:
+* `While Loop:` With the while loop we can execute a set of statements as long as a condition is true.
+* `For loop:` A for loop is used for iterating over a sequence (that is either a list, a tuple, a dictionary, a set, or a string). This is less like the for keyword in other programming languages, and works more like an iterator method as found in other object-orientated programming languages. With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.
+* `Break:` With the break statement we can stop the loop even if the while condition is true
+* `Continue:` With the continue statement we can stop the current iteration, and continue with the next
+* `else statements:` With the else statement we can run a block of code once when the condition no longer is true
+* `For Looping through the string:` Even strings are iterable objects, they contain a sequence of characters
+* `Range:` To loop through a set of code a specified number of times, we can use the range() function, The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and ends at a specified number. The range() function defaults to 0 as a starting value, however it is possible to specify the starting value by adding a parameter: range(2, 6), which means values from 2 to 6 (but not including 6), The range() function defaults to increment the sequence by 1, however it is possible to specify the increment value by adding a third parameter: range(2, 30, 3)
+* else: The else keyword in a for loop specifies a block of code to be executed when the loop is finished
+* `Nested Loop:` A nested loop is a loop inside a loop. The "inner loop" will be executed one time for each iteration of the "outer loop"
+
+**Python Functions**
+
+A function is a block of code which only runs when it is called. You can pass data, known as parameters, into a function. A function can return data as a result.
+
+* `Creating a Function:` In Python a function is defined using the `def keyword`
+* `Calling a function:` To call a function, use the function name followed by parenthesis
+* `Arguments:` Information can be passed into functions as arguments. Arguments are specified after the function name, inside the parentheses. You can add as many arguments as you want, just separate them with a comma.
+* `Arbitrary Arguments, *args:` If you do not know how many arguments that will be passed into your function, add a * before the parameter name in the function definition. This way the function will receive a tuple of arguments, and can access the items accordingly.
+* `Keyword Arguments:` You can also send arguments with the key = value syntax. This way the order of the arguments does not matter.
+* `Arbitrary Keyword Arguments, **kwargs:` If you do not know how many keyword arguments that will be passed into your function, add two asterisk: ** before the parameter name in the function definition.
+* `Default Parameter Value:` The following example shows how to use a default parameter value.
+*  `Passing a List as an Argument:` You can send any data types of argument to a function (string, number, list, dictionary etc.), and it will be treated as the same data type inside the function.
+* `Return Value:` To let a function return a value, use the return statement
+* `Pass statements:` function definitions cannot be empty, but if you for some reason have a function definition with no content, put in the pass statement to avoid getting an error.
+* `Recursion:` Python also accepts function recursion, which means a defined function can call itself. Recursion is a common mathematical and programming concept. It means that a function calls itself. This has the benefit of meaning that you can loop through data to reach a result. The developer should be very careful with recursion as it can be quite easy to slip into writing a function which never terminates, or one that uses excess amounts of memory or processor power. However, when written correctly recursion can be a very efficient and mathematically-elegant approach to programming. In this example, tri_recursion() is a function that we have defined to call itself ("recurse"). We use the k variable as the data, which decrements (-1) every time we recurse. The recursion ends when the condition is not greater than 0 (i.e. when it is 0). To a new developer it can take some time to work out how exactly this works, best way to find out is by testing and modifying it.
+
+**Python Lambda**
+
+A lambda function is a small anonymous function. A lambda function can take any number of arguments, but can only have one expression.
+
+`Why Use Lambda Functions?` --> The power of lambda is better shown when you use them as an anonymous function inside another function. Say you have a function definition that takes one argument, and that argument will be multiplied with an unknown number.
+
+
+
