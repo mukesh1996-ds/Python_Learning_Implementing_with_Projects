@@ -650,3 +650,116 @@ class Person:
 x = Person("John", "Doe")
 
 x.printname()
+
+`Create a Child Class:` To create a class that inherits the functionality from another class, send the parent class as a parameter when creating the child class.
+
+`Example:`
+
+class Student(Person):
+    pass
+
+Now the Student class has the same properties and methods as the Person class.
+
+x = Student("Mike", "Monu")
+x.printname()
+
+`Add the __init__() Function:` So far we have created a child class that inherits the properties and methods from its parent. We want to add the __init__() function to the child class (instead of the pass keyword).
+
+class Student(Person):
+  
+  def __init__(self, fname, lname):
+  
+    #add properties etc.
+
+When you add the __init__() function, the child class will no longer inherit the parent's __init__() function. To keep the inheritance of the parent's __init__() function, add a call to the parent's __init__() function:
+
+class Student(Person):
+
+  def __init__(self, fname, lname):
+
+    Person.__init__(self, fname, lname)
+
+Now we have successfully added the __init__() function, and kept the inheritance of the parent class, and we are ready to add functionality in the __init__() function.
+
+`Use the super() Function:` Python also has a super() function that will make the child class inherit all the methods and properties from its parent:
+
+class Student(Person):
+    
+    def __init__(self, fname, lname):
+    
+        super().__init__(fname, lname)
+
+By using the `super() function`, you do not have to use the name of the parent element, it will automatically inherit the methods and properties from its parent.
+
+`Add Properties:` Add a property called graduationyear to the Student class
+
+class Student(Person):
+
+  def __init__(self, fname, lname):
+
+    super().__init__(fname, lname)
+
+    self.graduationyear = 2019
+
+In the example below, the year 2019 should be a variable, and passed into the Student class when creating student objects. To do so, add another parameter in the __init__() function:
+
+class Student(Person):
+
+  def __init__(self, fname, lname, year):
+
+    super().__init__(fname, lname)
+
+    self.graduationyear = year
+
+x = Student("Mike", "Olsen", 2019)
+
+Now we have successfully added the __init__() function, and kept the inheritance of the parent class, and we are ready to add functionality in the __init__() function.
+
+**Python Iterators**
+
+An iterator is an object that contains a countable number of values.  An iterator is an object that can be iterated upon, meaning that you can traverse through all the values.Technically, in Python, an iterator is an object which implements the iterator protocol, which consist of the methods __iter__() and __next__().
+
+`Iterator vs Iterable:`Lists, tuples, dictionaries, and sets are all iterable objects. They are iterable containers which you can get an iterator from. All these objects have a iter() method which is used to get an iterator. Even strings are iterable objects, and can return an iterator.
+
+`Looping Through an Iterator:` We can also use a for loop to iterate through an iterable object.
+`Create an Iterator:` To create an object/class as an iterator you have to implement the methods __iter__() and __next__() to your object. The __iter__() method acts similar, you can do operations (initializing etc.), but must always return the iterator object itself. The __next__() method also allows you to do operations, and must return the next item in the sequence.
+
+`StopIteration:` The example above would continue forever if you had enough next() statements, or if it was used in a for loop. To prevent the iteration from going on forever, we can use the StopIteration statement. In the __next__() method, we can add a terminating condition to raise an error if the iteration is done a specified number of times. 
+
+**Python Polymorphism**
+The word "polymorphism" means "many forms", and in programming it refers to methods/functions/operators with the same name that can be executed on many objects or classes.
+
+`Function Polymorphism:` An example of a Python function that can be used on different objects is the len() function.
+
+`Class Polymorphism:` Polymorphism is often used in Class methods, where we can have multiple classes with the same method name. For example, say we have three classes: Car, Boat, and Plane, and they all have a method called move():
+
+`Inheritance Class Polymorphism:` What about classes with child classes with the same name? Can we use polymorphism there? Yes. If we use the example above and make a parent class called Vehicle, and make Car, Boat, Plane child classes of Vehicle, the child classes inherits the Vehicle methods, but can override them.
+
+Child classes inherits the properties and methods from the parent class.
+
+In the example above you can see that the Car class is empty, but it inherits brand, model, and move() from Vehicle.
+
+The Boat and Plane classes also inherit brand, model, and move() from Vehicle, but they both override the move() method.
+
+Because of polymorphism we can execute the same method for all classes.
+
+**Python Scope**
+
+A variable is only available from inside the region it is created. This is called scope. 
+
+`Local Scope:`A variable created inside a function belongs to the local scope of that function, and can only be used inside that function.
+
+`Function Inside Function:`As explained in the example above, the variable x is not available outside the function, but it is available for any function inside the function.
+
+`Global Scope:` A variable created in the main body of the Python code is a global variable and belongs to the global scope. Global variables are available from within any scope, global and local.
+
+`Naming Variables:`If you operate with the same variable name inside and outside of a function, Python will treat them as two separate variables, one available in the global scope (outside the function) and one available in the local scope (inside the function)
+
+`Global Keyword:` If you need to create a global variable, but are stuck in the local scope, you can use the global keyword. The global keyword makes the variable global. Also, use the global keyword if you want to make a change to a global variable inside a function.
+
+
+**Python Module**
+Consider a module to be the same as a code library. A file containing a set of functions you want to include in your application.
+
+`Create a Module:` To create a module just save the code you want in a file with the file extension .py
+`Use a module:` Now we can use the module we just created, by using the import statement.
