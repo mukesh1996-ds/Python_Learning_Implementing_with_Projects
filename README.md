@@ -763,3 +763,236 @@ Consider a module to be the same as a code library. A file containing a set of f
 
 `Create a Module:` To create a module just save the code you want in a file with the file extension .py
 `Use a module:` Now we can use the module we just created, by using the import statement.
+`Variables in Module:` The module can contain functions, as already described, but also variables of all types (arrays, dictionaries, objects etc).
+`Naming a Module:` You can name the module file whatever you like, but it must have the file extension .py
+
+**Python Datetime**
+
+A date in Python is not a data type of its own, but we can import a module named datetime to work with dates as date objects.
+
+`Date Output:` When we execute the code from the example above the result will be:
+
+`2023-09-11 11:19:16.136868`
+
+The date contains year, month, day, hour, minute, second, and microsecond.
+
+The datetime module has many methods to return information about the date object.
+
+Here are a few examples, you will learn more about them later in this chapter
+
+`Creating Date Objects:` To create a date, we can use the datetime() class (constructor) of the datetime module. The datetime() class requires three parameters to create a date: year, month, day. The datetime() class also takes parameters for time and timezone (hour, minute, second, microsecond, tzone), but they are optional, and has a default value of 0, (None for timezone).
+
+`The strftime() Method:` The datetime object has a method for formatting date objects into readable strings. The method is called strftime(), and takes one parameter, format, to specify the format of the returned string.
+
+| Directive  | Description                                | Example       |
+|------------|--------------------------------------------|---------------|
+| %a         | Weekday, short version                     | Wed           |
+| %A         | Weekday, full version                      | Wednesday     |
+| %w         | Weekday as a number 0-6, 0 is Sunday       | 3             |
+| %d         | Day of month 01-31                         | 31            |
+| %b         | Month name, short version                  | Dec           |
+| %B         | Month name, full version                   | December      |
+| %m         | Month as a number 01-12                    | 12            |
+| %y         | Year, short version, without century       | 18            |
+| %Y         | Year, full version                         | 2018          |
+| %H         | Hour 00-23                                 | 17            |
+| %I         | Hour 00-12                                 | 05            |
+| %p         | AM/PM                                      | PM            |
+| %M         | Minute 00-59                               | 41            |
+| %S         | Second 00-59                               | 08            |
+| %f         | Microsecond 000000-999999                   | 548513        |
+| %z         | UTC offset                                 | +0100         |
+| %Z         | Timezone                                   | CST           |
+| %j         | Day number of year 001-366                 | 365           |
+| %U         | Week number of year, Sunday as the first day of week, 00-53 | 52  |
+| %W         | Week number of year, Monday as the first day of week, 00-53 | 52  |
+| %c         | Local version of date and time             | Mon Dec 31 17:41:00 2018 |
+| %C         | Century                                    | 20            |
+| %x         | Local version of date                      | 12/31/18      |
+| %X         | Local version of time                      | 17:41:00      |
+| %%         | A % character                              | %             |
+| %G         | ISO 8601 year                              | 2018          |
+| %u         | ISO 8601 weekday (1-7)                     | 1             |
+| %V         | ISO 8601 weeknumber (01-53)                | 01            |
+
+
+**Python Math**
+
+Python has a set of built-in math functions, including an extensive math module, that allows you to perform mathematical tasks on numbers.
+
+`Built-in Math Functions:`
+* The min() and max() functions can be used to find the lowest or highest value in an iterable
+* The abs() function returns the absolute (positive) value of the specified number
+* The pow(x, y) function returns the value of x to the power of y (xy).
+* The math.sqrt() method for example, returns the square root of a number
+* The math.ceil() method rounds a number upwards to its nearest integer, and the math.floor() method rounds a number downwards to its nearest integer, and returns the result
+* The math.pi constant, returns the value of PI (3.14...)
+
+
+**Python JSON:**
+
+JSON is a syntax for storing and exchanging data.  JSON is text, written with JavaScript object notation. Python has a built-in package called json, which can be used to work with JSON data. If you have a JSON string, you can parse it by using the json.loads() method. If you have a Python object, you can convert it into a JSON string by using the json.dumps() method.
+
+You can convert Python objects of the following types, into JSON strings:
+* dict
+* list
+* tuple
+* string
+* int
+* float
+* True
+* False
+* None
+
+When you convert from Python to JSON, Python objects are converted into the JSON (JavaScript) equivalent.
+
+| Python | JSON   |
+|--------|--------|
+| dict   | Object |
+| list   | Array  |
+| tuple  | Array  |
+| str    | String |
+| int    | Number |
+| float  | Number |
+| True   | true   |
+| False  | false  |
+| None   | null   |
+
+**Python RegEx**
+A RegEx, or Regular Expression, is a sequence of characters that forms a search pattern. RegEx can be used to check if a string contains the specified search pattern.
+
+`RegEx Module:`Python has a built-in package called re, which can be used to work with Regular Expressions.
+`RegEx in Python:` When you have imported the re module, you can start using regular expressions.
+
+`RegEx Functions:`The re module offers a set of functions that allows us to search a string for a match.
+| Function | Description                                           |
+|----------|-------------------------------------------------------|
+| findall  | Returns a list containing all matches                |
+| search   | Returns a Match object if there is a match anywhere in the string |
+| split    | Returns a list where the string has been split at each match |
+| sub      | Replaces one or many matches with a string            |
+
+`Metacharacters:`
+
+Metacharacters are characters with a special meaning.
+
+| Character | Description                          | Example        |
+|-----------|--------------------------------------|----------------|
+| []        | A set of characters                  | "[a-m]"        |
+| \         | Signals a special sequence           | "\d"           |
+| .         | Any character (except newline)       | "he..o"        |
+| ^         | Starts with                          | "^hello"       |
+| $         | Ends with                            | "planet$"      |
+| *         | Zero or more occurrences             | "he.*o"        |
+| +         | One or more occurrences              | "he.+o"        |
+| ?         | Zero or one occurrence               | "he.?o"        |
+| {}        | Exactly the specified number of occurrences | "he.{2}o" |
+| \|        | Either or                            | "falls\|stays" |
+| ()        | Capture and group                    |                |
+
+
+`Special Sequences:`
+A special sequence is a \ followed by one of the characters in the list below, and has a special meaning
+| Character | Description | Example |
+| --- | --- | --- | --- |
+| `\A` | Returns a match if the specified characters are at the beginning of the string | `"\AThe"` | |
+| `\b` | Returns a match where the specified characters are at the beginning or at the end of a word (the "r" in the beginning is making sure that the string is being treated as a "raw string") | `r"\bain"` | `r"ain\b"` |
+| `\B` | Returns a match where the specified characters are present, but NOT at the beginning (or at the end) of a word (the "r" in the beginning is making sure that the string is being treated as a "raw string") | `r"\Bain"` | `r"ain\B"` |
+| `\d` | Returns a match where the string contains digits (numbers from 0-9) | `"\d"` | |
+| `\D` | Returns a match where the string DOES NOT contain digits | `"\D"` | |
+| `\s` | Returns a match where the string contains a white space character | `"\s"` | |
+| `\S` | Returns a match where the string DOES NOT contain a white space character | `"\S"` | |
+| `\w` | Returns a match where the string contains any word characters (characters from a to Z, digits from 0-9, and the underscore _ character) | `"\w"` | |
+| `\W` | Returns a match where the string DOES NOT contain any word characters | `"\W"` | |
+| `\Z` | Returns a match if the specified characters are at the end of the string | `"Spain\Z"` | |
+
+`Sets:`A set is a set of characters inside a pair of square brackets [] with a special meaning
+
+| Set       | Description                                                                       |
+|-----------|-----------------------------------------------------------------------------------|
+| [arn]     | Returns a match where one of the specified characters (a, r, or n) is present     |
+| [a-n]     | Returns a match for any lowercase character alphabetically between a and n       |
+| [^arn]    | Returns a match for any character EXCEPT a, r, and n                              |
+| [0123]    | Returns a match where any of the specified digits (0, 1, 2, or 3) are present     |
+| [0-9]     | Returns a match for any digit between 0 and 9                                    |
+| [0-5][0-9]| Returns a match for any two-digit numbers from 00 to 59                          |
+| [a-zA-Z]  | Returns a match for any character alphabetically between a and z, lowercase OR uppercase |
+| [+]       | In sets, +, *, ., |, (), $, {} have no special meaning, so [+] means: return a match for any + character in the string |
+
+`findall() Function:` The findall() function returns a list containing all matches.
+`search() Function:` The search() function searches the string for a match, and returns a Match object if there is a match. If there is more than one match, only the first occurrence of the match will be returned.
+`split() Function:` The split() function returns a list where the string has been split at each match
+`sub() Function:` The sub() function replaces the matches with the text of your choice
+`Match Object:` A Match Object is an object containing information about the search and the result. The Match object has properties and methods used to retrieve information about the search, and the result:
+* `.span()` returns a tuple containing the start-, and end positions of the match.
+* `.string` returns the string passed into the function
+* `.group()` returns the part of the string where there was a match
+
+**Python Exception Handling**
+
+Exception handling in Python is a mechanism that allows you to gracefully handle errors and exceptions that may occur during the execution of your program. It helps prevent your program from crashing and provides a way to handle unexpected situations. Python provides a few keywords and constructs for exception handling:
+
+* `try:` This is the block where you place code that might raise an exception.
+
+* `except:` This block is executed when an exception is raised in the try block. You can specify which type of exception you want to catch or use a generic except to catch all exceptions.
+
+* `else:` This block is executed if no exceptions are raised in the try block.
+
+* `finally:` This block is always executed, regardless of whether an exception occurred or not. It's typically used for cleanup tasks.
+
+**File Handling in Python**
+
+`File handling` is an important part of any web application. Python has several functions for creating, reading, updating, and deleting files.
+* File Handling: The key function for working with files in Python is the open() function. The open() function takes two parameters; filename, and mode.There are four different methods (modes) for opening a file:
+
+* `"r" - Read - Default value. Opens a file for reading, error if the file does not exist`
+
+* `"a" - Append - Opens a file for appending, creates the file if it does not exist`
+
+* `"w" - Write - Opens a file for writing, creates the file if it does not exist`
+
+* `"x" - Create - Creates the specified file, returns an error if the file exists`
+
+`Reading Files:` Assume we have the following file, located in the same folder as Python To open the file, use the built-in open() function.The open() function returns a file object, which has a read() method for reading the content of the file. If the file is located in a different location, you will have to specify the file path.
+
+`Write to an Existing File:` To write to an existing file, you must add a parameter to the open() function:
+
+`"a" - Append - will append to the end of the file`
+
+`"w" - Write - will overwrite any existing content`
+
+`Create a New File:` To create a new file in Python, use the open() method, with one of the following parameters:
+
+`"x" - Create - will create a file, returns an error if the file exist`
+`"a" - Append - will create a file if the specified file does not exist`
+`"w" - Write - will create a file if the specified file does not exist`
+
+`Delete a Python file:` To delete a file, you must import the OS module, and run its os.remove() function
+
+**Python Random Module**
+Python has a built-in module that you can use to make random numbers. The random module has a set of methods.
+| Method              | Description                                               |
+| ------------------- | --------------------------------------------------------- |
+| `seed()`            | Initialize the random number generator                   |
+| `getstate()`        | Returns the current internal state of the random number generator |
+| `setstate()`        | Restores the internal state of the random number generator |
+| `getrandbits()`     | Returns a number representing the random bits            |
+| `randrange()`       | Returns a random number between the given range           |
+| `randint()`         | Returns a random number between the given range           |
+| `choice()`          | Returns a random element from the given sequence          |
+| `choices()`         | Returns a list with a random selection from the given sequence |
+| `shuffle()`         | Takes a sequence and returns the sequence in a random order |
+| `sample()`          | Returns a given sample of a sequence                      |
+| `random()`          | Returns a random float number between 0 and 1             |
+| `uniform()`         | Returns a random float number between two given parameters |
+| `triangular()`      | Returns a random float number between two given parameters, with an optional midpoint parameter |
+| `betavariate()`     | Returns a random float number between 0 and 1 based on the Beta distribution (used in statistics) |
+| `expovariate()`     | Returns a random float number based on the Exponential distribution (used in statistics) |
+| `gammavariate()`    | Returns a random float number based on the Gamma distribution (used in statistics) |
+| `gauss()`           | Returns a random float number based on the Gaussian distribution (used in probability theories) |
+| `lognormvariate()`  | Returns a random float number based on a log-normal distribution (used in probability theories) |
+| `normalvariate()`   | Returns a random float number based on the normal distribution (used in probability theories) |
+| `vonmisesvariate()` | Returns a random float number based on the von Mises distribution (used in directional statistics) |
+| `paretovariate()`   | Returns a random float number based on the Pareto distribution (used in probability theories) |
+| `weibullvariate()`  | Returns a random float number based on the Weibull distribution (used in statistics) |
+
