@@ -495,5 +495,131 @@ A lambda function is a small anonymous function. A lambda function can take any 
 
 `Why Use Lambda Functions?` --> The power of lambda is better shown when you use them as an anonymous function inside another function. Say you have a function definition that takes one argument, and that argument will be multiplied with an unknown number.
 
+**Python Arrays**
+
+Python does not have built-in support for Arrays, but Python Lists can be used instead.
+
+An array is a special variable, which can hold more than one value at a time. If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:
+
+`Car1 = "FOrd"`
+`Car2 = "Volvo"`
+
+However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300? The solution is an array! An array can hold many values under a single name, and you can access the values by referring to an index number.
+
+`Accessing element into the array:` You refer to an array element by referring to the `index number`.
+`Check the length of the array:` Use the `len()` method to return the length of an array (the number of elements in an array).
+`Looping Array Elements:` You can use the for in loop to loop through all the elements of an array.
+`Adding Array Elements:` You can use the append() method to add an element to an array.
+`Removing Array Elements:` You can use the pop() method to remove an element from the array. or You can also use the remove() method to remove an element from the array.
+
+`Array Methods:` 
+| Method    | Description                                      |
+|-----------|--------------------------------------------------|
+| append()  | Adds an element at the end of the list          |
+| clear()   | Removes all the elements from the list          |
+| copy()    | Returns a copy of the list                       |
+| count()   | Returns the number of elements with the specified value |
+| extend()  | Add the elements of a list (or any iterable), to the end of the current list |
+| index()   | Returns the index of the first element with the specified value |
+| insert()  | Adds an element at the specified position       |
+| pop()     | Removes the element at the specified position   |
+| remove()  | Removes the first item with the specified value |
+| reverse() | Reverses the order of the list                   |
+| sort()    | Sorts the list                                   |
+
+**Python Classes and Objects**
+Python is an object oriented programming language. Almost everything in Python is an object, with its properties and methods. A Class is like an object constructor, or a `"blueprint"` for creating objects.
+`Creating a Class:` To create a class, use the keyword `class`
+                    
+                    class MyClass:
+                        x = 5
+
+`Create Object:` Now we can use the class named MyClass to create objects
+                    p1 = MyClass()
+                    print(p1.x)
+
+`The __init__() Function:`The examples above are classes and objects in their simplest form, and are not really useful in real life applications. To understand the meaning of classes we have to understand the built-in __init__() function.All classes have a function called __init__(), which is always executed when the class is being initiated. Use the __init__() function to assign values to object properties, or other operations that are necessary to do when the object is being created:
+
+`Example:`
+
+class Person:
+
+  def __init__(self, name, age):
+
+    self.name = name
+
+    self.age = age
+
+p1 = Person("John", 36)
+
+print(p1.name)
+
+print(p1.age)
+
+`The __str__() Function:`The __str__() function controls what should be returned when the class object is represented as a string. If the __str__() function is not set, the string representation of the object is returned
+
+`Example:`
+
+class Person:
+  
+  def __init__(self, name, age):
+  
+    self.name = name
+  
+    self.age = age
+
+  def __str__(self):
+  
+    return f"{self.name}({self.age})"
+
+p1 = Person("John", 36)
+
+print(p1)
 
 
+`Object Methods:` Objects can also contain methods. Methods in objects are functions that belong to the object. Let us create a method in the Person class:
+
+`Example:`
+
+class Person:
+
+  def __init__(self, name, age):
+
+    self.name = name
+
+    self.age = age
+
+  def myfunc(self):
+
+    print("Hello my name is " + self.name)
+
+p1 = Person("John", 36)
+
+p1.myfunc()
+
+`The self Parameter:` The self parameter is a reference to the current instance of the class, and is used to access variables that belongs to the class. It does not have to be named self , you can call it whatever you like, but it has to be the first parameter of any function in the class:
+
+`Example:`
+class Person:
+  
+  def __init__(mysillyobject, name, age):
+  
+    mysillyobject.name = name
+  
+    mysillyobject.age = age
+
+  def myfunc(abc):
+  
+    print("Hello my name is " + abc.name)
+
+p1 = Person("John", 36)
+
+p1.myfunc()
+
+`The pass Statement:` class definitions cannot be empty, but if you for some reason have a class definition with no content, put in the pass statement to avoid getting an error.
+
+`Example:`
+
+class Person:
+  
+  pass
